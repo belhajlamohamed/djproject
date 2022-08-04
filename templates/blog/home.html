@@ -1,0 +1,20 @@
+{% extends '../base.html' %}
+               
+
+{% block content %}
+<div class="row p-1">
+    {% for post in posts %}
+    <div class="col-12">
+        <div class="shadow-sm bg-light px-4 py-2 mb-3">
+            <a href="" class="me-2">{{post.author}}</a>
+            <small class="text-muted">{{post.date_posted|date:"F d, Y"}}</small>
+           <hr>
+           <h2><a href="">{{post.title}}</a></h2>
+           <p>{{post.content}}</p>
+           
+       </div>
+    </div>
+    {% endfor%}
+</div>
+
+{% endblock content %}
